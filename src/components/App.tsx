@@ -1,5 +1,6 @@
 import Mailbox from "./Mailbox/Mailbox";
 import Mailbox2 from "./Mailbox/Mailbox2";
+import List from "./List/List";
 
 const username = "Kostya"
 const messages = [
@@ -15,6 +16,7 @@ export default function App() {
       <h1>Hello</h1>
       <Mailbox username={username} messages={messages} />
       <Mailbox2 username={username} unreadMessages={unreadMessages} />
+      <List />
     </>
   );
 }
