@@ -7,7 +7,7 @@ export default function Mailbox2({ username, unreadMessages }: MailboxProps) {
   return (
     <>
       <p>Hello, {username} </p>
-      <p>
+      <div>
         {unreadMessages.length > 0 ? (
           <>
             <p>You have {unreadMessages.length} unread messages</p>
@@ -17,7 +17,7 @@ export default function Mailbox2({ username, unreadMessages }: MailboxProps) {
         ) : (
           <p>No unread messages</p>
         )}
-      </p>
+      </div>
     </>
   );
 }

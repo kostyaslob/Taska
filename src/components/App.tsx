@@ -12,6 +12,11 @@ const messages = [
 
 const unreadMessages = ["Message 1", "Message 2", "Message 3 "];
 
+const handleClick = (type: string) => {
+  console.log(`${type} button clicked`);
+};
+
+
 export default function App() {
   return (
     <>
@@ -22,9 +27,17 @@ export default function App() {
       <Alert message="Default color" />
       <Alert type="success" message="Green color" />
       <Alert type="error" message="Red color" />
-      <Button text="Default"></Button>
-      <Button type="search" text="Search"></Button>
-      <Button type="reset" text="Reset"></Button>
+      <Button onClick={() => handleClick("default")} text="Default"></Button>
+      <Button
+        onClick={() => handleClick("search")}
+        type="search"
+        text="Search"
+      ></Button>
+      <Button
+        onClick={() => handleClick("reset")}
+        type="reset"
+        text="Reset"
+      ></Button>
     </>
   );
 }
