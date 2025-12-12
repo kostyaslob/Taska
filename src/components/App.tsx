@@ -2,6 +2,7 @@ import Mailbox from "./Mailbox/Mailbox";
 import Mailbox2 from "./Mailbox/Mailbox2";
 import List from "./List/List";
 import Alert from "./Alert/Alert";
+import Button from "./Button/Button"
 
 const username = "Kostya";
 const messages = [
@@ -19,12 +20,11 @@ export default function App() {
       <Mailbox2 username={username} unreadMessages={unreadMessages} />
       <List />
       <Alert message="Default color" />
-      <Alert
-        type="success"
-        message="Green color" />
-      <Alert
-        type="error"
-        message="Red color" />
+      <Alert type="success" message="Green color" />
+      <Alert type="error" message="Red color" />
+      <Button text="Default"></Button>
+      <Button type="search" text="Search"></Button>
+      <Button type="reset" text="Reset"></Button>
     </>
   );
 }

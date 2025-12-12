@@ -1,0 +1,15 @@
+.default {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: gray;
+    border: none;
+}
+
+.search {
+    background-color: blue;
+}
+
+.reset {
+    background-color: red;
+}
