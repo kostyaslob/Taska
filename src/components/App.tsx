@@ -12,12 +12,18 @@ const messages = [
 
 const unreadMessages = ["Message 1", "Message 2", "Message 3 "];
 
-const handleClick = (type: string) => {
-  console.log(`${type} button clicked`);
-};
+// const handleClick = (type: string) => {
+//   console.log(`${type} button clicked`);
+// };
 
 
 export default function App() {
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log("Clicked", event);
+    console.log("Target", event.target);
+}
+  
   return (
     <>
       <h1>Hello</h1>
@@ -38,6 +44,10 @@ export default function App() {
         type="reset"
         text="Reset"
       ></Button>
+      <button onClick={handleClick}>Click me!</button>
+      
+
     </>
+    
   );
 }
