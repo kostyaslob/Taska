@@ -2,7 +2,9 @@ import Mailbox from "./Mailbox/Mailbox";
 import Mailbox2 from "./Mailbox/Mailbox2";
 import List from "./List/List";
 import Alert from "./Alert/Alert";
-import Button from "./Button/Button"
+import Button from "./Button/Button";
+import ClickCounter from "./ClickCounter/ClickCounter";
+import { useState } from "react";
 
 const username = "Kostya";
 const messages = [
@@ -16,14 +18,14 @@ const unreadMessages = ["Message 1", "Message 2", "Message 3 "];
 //   console.log(`${type} button clicked`);
 // };
 
-
 export default function App() {
+  const [clicks, setClicks] = useState(0);
+  console.log(clicks);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("Clicked", event);
-    console.log("Target", event.target);
-}
-  
+  const handleClick = () => {
+    setClicks(clicks + 1);
+  };
+
   return (
     <>
       <h1>Hello</h1>
@@ -44,10 +46,8 @@ export default function App() {
         type="reset"
         text="Reset"
       ></Button>
-      <button onClick={handleClick}>Click me!</button>
-      
-
+      <ClickCounter value={clicks} onUpdate={handleClick} />
+      <ClickCounter value={clicks} onUpdate={handleClick} />
     </>
-    
   );
 }
