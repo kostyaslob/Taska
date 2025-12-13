@@ -4,6 +4,7 @@ import List from "./List/List";
 import Alert from "./Alert/Alert";
 import Button from "./Button/Button";
 import ClickCounter from "./ClickCounter/ClickCounter";
+import SomeState from "./SomeState/SomeState"
 import { useState } from "react";
 
 const username = "Kostya";
@@ -48,6 +49,7 @@ export default function App() {
       ></Button>
       <ClickCounter value={clicks} onUpdate={handleClick} />
       <ClickCounter value={clicks} onUpdate={handleClick} />
+      <SomeState />
     </>
   );
 }
