@@ -16,15 +16,17 @@ const messages = [
 
 const unreadMessages = ["Message 1", "Message 2", "Message 3 "];
 
-// const handleClick = (type: string) => {
-//   console.log(`${type} button clicked`);
-// };
+
 
 export default function App() {
   const [clicks, setClicks] = useState(0);
   console.log(clicks);
 
-  const handleClick = () => {
+  const handleClick = (type: string) => {
+    console.log(`${type} button clicked`);
+  };
+
+  const handleClick2 = () => {
     setClicks(clicks + 1);
   };
 
@@ -48,8 +50,8 @@ export default function App() {
         type="reset"
         text="Reset"
       ></Button>
-      <ClickCounter value={clicks} onUpdate={handleClick} />
-      <ClickCounter value={clicks} onUpdate={handleClick} />
+      <ClickCounter value={clicks} onUpdate={handleClick2} />
+      <ClickCounter value={clicks} onUpdate={handleClick2} />
       <SomeState />
       <Coordinate />
     </>
